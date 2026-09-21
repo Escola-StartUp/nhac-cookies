@@ -1,0 +1,18 @@
+{
+  "name": "nhac-cookies",
+  "version": "1.0.0",
+  "description": "nhac! COOKIES - Aplicativo e protótipo web responsivo",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx -y serve . -l 3000",
+    "start": "npx -y serve . -l 3000",
+    "serve": "npx -y serve . -l 3000"
+  },
+  "keywords": [
+    "nhac",
+    "cookies",
+    "artesanal"
+  ],
+  "author": "Alisson Soares",
+  "license": "ISC"
+}

@@ -1,0 +1,19 @@
+# nhac! COOKIES — configuração de publicação no Netlify
+# Site 100% estático: publica a raiz do repositório, sem etapa de build.
+[build]
+  publish = "."
+  command = ""
+
+# Segurança básica em todas as respostas
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+# Cache longo para imagens (os arquivos versionados ?v= em css/js também se beneficiam)
+[[headers]]
+  for = "/public/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
