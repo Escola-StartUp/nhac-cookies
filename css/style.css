@@ -1213,6 +1213,7 @@ body[data-active-view="splash"] .view-splash {
     flex-direction: column;
     align-items: center;
     left: 0;
+    transform: none !important;
     width: 100%;
     margin: 0 auto;
   }
@@ -1378,6 +1379,7 @@ body[data-active-view="splash"] .view-splash {
   .hero-text-side {
     position: relative;
     left: 0;
+    transform: none !important;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -5488,6 +5490,7 @@ body[data-active-view="splash"] .view-splash {
 
   .hero-text-side {
     left: 0 !important;
+    transform: none !important;
     width: 100%;
     margin: 0 auto;
     padding: 0;
