@@ -530,189 +530,280 @@
         </svg>
       </div>
 
-      <!-- 3. Vitrine dos Sabores de ref.png (Telas 3 e 4 em destaque interativo) -->
+      <!-- 3. Vitrine dos Sabores (Cardápio Oficial — 100% fiel à referência) -->
       <section class="signature-flavors-section" id="sabores">
+        <!-- Elementos decorativos nos cantos conforme a imagem -->
+        <div class="cardapio-deco-cookie-top-left" aria-hidden="true">
+          <img src="public/cookie_hero.png" alt="" class="deco-top-cookie-img">
+        </div>
+        <div class="cardapio-deco-yellow-top-right" aria-hidden="true">
+          <svg viewBox="0 0 160 140" fill="none" class="deco-yellow-blob-svg">
+            <path d="M40,0 C90,10 160,30 160,90 C160,130 120,140 80,130 C30,120 0,90 0,40 C0,10 20,0 40,0 Z" fill="#FFD737"/>
+          </svg>
+          <span class="deco-choco-chunk chunk-1"></span>
+          <span class="deco-choco-chunk chunk-2"></span>
+          <span class="deco-choco-chunk chunk-3"></span>
+        </div>
+        <div class="cardapio-deco-stamp-bottom-left" aria-hidden="true">
+          <div class="deco-stamp-wave-bg">
+            <svg viewBox="0 0 220 120" fill="none" preserveAspectRatio="none">
+              <path d="M0,40 C70,20 140,70 220,50 L220,120 L0,120 Z" fill="#FFD737"/>
+            </svg>
+            <span class="deco-stamp-text">Mais que cookies,<br>é nhac! ♡</span>
+          </div>
+        </div>
+        <div class="cardapio-deco-logo-bottom-right" aria-hidden="true">
+          <div class="deco-logo-badge-container">
+            <span class="deco-logo-rays"></span>
+            <img src="public/logo.png" alt="nhac! Cookies" class="deco-logo-mascot-img">
+          </div>
+        </div>
+
         <div class="content-container">
+          <!-- Título da Seção Fiel à Referência -->
           <div class="section-title-wrap reveal">
-            <span class="section-subtitle">Cardápio Oficial</span>
-            <h2 class="section-heading">Nossos Sabores Mais Amados</h2>
+            <div class="cardapio-sub-badge">
+              <span class="c-ray-left">―</span>
+              <span class="c-badge-text">Cardápio Oficial</span>
+              <span class="c-ray-right">―</span>
+            </div>
+            <h2 class="section-heading-cardapio">
+              <span class="heading-sparkles-left" aria-hidden="true">
+                <span class="h-spark-1"></span>
+                <span class="h-spark-2"></span>
+                <span class="h-spark-3"></span>
+              </span>
+              <span class="heading-txt-white">Nossos Sabores </span><span class="heading-txt-yellow">Mais Amados</span> <span class="heading-txt-heart">♡</span>
+            </h2>
             <p class="section-desc">Clique para ver os detalhes de cada receita ou adicione direto ao seu carrinho.</p>
           </div>
 
           <div class="signature-cards-grid">
-            <!-- Carrossel automático dos cookies (a caixa permanece fixa abaixo) -->
+            <!-- Carrossel com Botões de Navegação < e > -->
             <div class="flavor-carousel reveal-fade" id="flavor-carousel" aria-roledescription="carousel" aria-label="Carrossel de sabores">
+              
+              <!-- Botão Anterior < -->
+              <button class="carousel-nav-btn carousel-prev-btn" id="flavor-prev-btn" aria-label="Sabor anterior" type="button">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="15 18 9 12 15 6"></polyline>
+                </svg>
+              </button>
+
               <div class="flavor-viewport" id="flavor-viewport">
                 <div class="flavor-track" id="flavor-track">
-            <!-- Card 1: Biscoito Cookie com Gotas de Chocolate (ref.png Tela 3) -->
-            <article class="signature-card theme-purple">
-              <div class="card-badge-header">
-                <span class="seal-pill seal-pill-blue">FEITO À MÃO ★</span>
-                <span class="weight-pill">PESO LÍQ. 35g</span>
-              </div>
+                  
+                  <!-- Card 1: Biscoito Cookie com Gotas de Chocolate -->
+                  <article class="signature-card card-flavor-gotas">
+                    <div class="card-badge-header">
+                      <span class="card-tag-pill tag-dark"><span class="tag-icon">♡</span> FEITO À MÃO</span>
+                      <span class="card-tag-pill tag-cream">PESO LÍQ. 35g</span>
+                    </div>
 
-              <!-- Foto Real do Cookie com Gotas de Chocolate (public/cookie_tradicional.png) -->
-              <div class="cookie-visual-container" data-view="gotas" title="Clique para abrir detalhes">
-                <img src="public/cookie_tradicional.png" alt="Biscoito Cookie com gotas de Chocolate" class="cookie-card-photo">
-              </div>
+                    <!-- Fundo Ondulado Amarelo + Foto do Cookie Tradicional -->
+                    <div class="cookie-visual-container card-visual-gotas" data-view="gotas" title="Clique para abrir detalhes">
+                      <div class="card-stage-wave wave-yellow-stage" aria-hidden="true"></div>
+                      <img src="public/cookie_tradicional.png" alt="Biscoito Cookie com gotas de Chocolate" class="cookie-card-photo">
+                    </div>
 
-              <div class="card-info-content">
-                <!-- Balão Amarelo de Título (ref.png) -->
-                <div class="yellow-title-bubble">
-                  <h3>Biscoito Cookie com gotas de Chocolate</h3>
+                    <div class="card-info-content">
+                      <h3 class="card-cookie-title">Biscoito Cookie com gotas de Chocolate</h3>
+                      <p class="card-cookie-desc">Macio por dentro, crocante por fora!</p>
+
+                      <div class="card-bottom-actions">
+                        <div class="card-price-block">
+                          <div class="price-val-wrap">
+                            <span class="price-currency">R$</span>
+                            <strong class="price-num">6,90</strong>
+                          </div>
+                          <button class="card-details-link" data-view="gotas" type="button">Ver Detalhes →</button>
+                        </div>
+                        <button class="btn-nhac-pill btn-card-add" data-add-cart="gotas" type="button">
+                          <svg class="cart-btn-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                            <circle cx="9" cy="21" r="1"></circle>
+                            <circle cx="20" cy="21" r="1"></circle>
+                            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                          </svg>
+                          <span>Adicionar</span>
+                        </button>
+                      </div>
+                    </div>
+                  </article>
+
+                  <!-- Card 2: Biscoito Cookie com Recheio de Chocolate -->
+                  <article class="signature-card card-flavor-recheio">
+                    <div class="card-badge-header">
+                      <span class="card-tag-pill tag-dark"><span class="tag-icon">♡</span> FEITO À MÃO</span>
+                      <span class="card-tag-pill tag-cream">PESO LÍQ. 40g</span>
+                    </div>
+
+                    <!-- Fundo Ondulado Marrom Chocolate + Foto do Cookie Recheado -->
+                    <div class="cookie-visual-container card-visual-recheio" data-view="recheio" title="Clique para abrir detalhes">
+                      <div class="card-stage-wave wave-brown-stage" aria-hidden="true"></div>
+                      <img src="public/cookie_recheado.png" alt="Biscoito Cookie com recheio de Chocolate" class="cookie-card-photo">
+                    </div>
+
+                    <div class="card-info-content">
+                      <h3 class="card-cookie-title">Biscoito Cookie com recheio de Chocolate</h3>
+                      <p class="card-cookie-desc">Crocante por fora, cremoso por dentro!</p>
+
+                      <div class="card-bottom-actions">
+                        <div class="card-price-block">
+                          <div class="price-val-wrap">
+                            <span class="price-currency">R$</span>
+                            <strong class="price-num">7,90</strong>
+                          </div>
+                          <button class="card-details-link" data-view="recheio" type="button">Ver Detalhes →</button>
+                        </div>
+                        <button class="btn-nhac-pill btn-card-add" data-add-cart="recheio" type="button">
+                          <svg class="cart-btn-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                            <circle cx="9" cy="21" r="1"></circle>
+                            <circle cx="20" cy="21" r="1"></circle>
+                            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                          </svg>
+                          <span>Adicionar</span>
+                        </button>
+                      </div>
+                    </div>
+                  </article>
+
+                  <!-- Card 3: Cookie Red Velvet com Gotas (DESTAQUE COM BORDA DOURADA/AMARELA) -->
+                  <article class="signature-card card-flavor-redvelvet is-featured-glow is-center">
+                    <div class="card-badge-header">
+                      <span class="card-tag-pill tag-dark tag-star"><span class="tag-icon">★</span> RECEITA NOVA</span>
+                      <span class="card-tag-pill tag-cream">PESO LÍQ. 35g</span>
+                    </div>
+
+                    <!-- Fundo Ondulado Vermelho com Raios Amarelos + Foto do Red Velvet -->
+                    <div class="cookie-visual-container card-visual-redvelvet" data-view="catalogo" title="Clique para abrir cardápio">
+                      <div class="card-stage-wave wave-red-stage" aria-hidden="true">
+                        <span class="stage-sun-rays" aria-hidden="true"></span>
+                      </div>
+                      <img src="public/cookie01.jpeg" alt="Cookie Red Velvet com Gotas" class="cookie-card-photo">
+                    </div>
+
+                    <div class="card-info-content">
+                      <h3 class="card-cookie-title">Cookie Red Velvet com Gotas</h3>
+                      <p class="card-cookie-desc">Massa aveludada com gotas nobres!</p>
+
+                      <div class="card-bottom-actions">
+                        <div class="card-price-block">
+                          <div class="price-val-wrap">
+                            <span class="price-currency">R$</span>
+                            <strong class="price-num">7,90</strong>
+                          </div>
+                          <button class="card-details-link" data-view="catalogo" type="button">Ver Detalhes →</button>
+                        </div>
+                        <button class="btn-nhac-pill btn-card-add" data-add-cart="redvelvet" type="button">
+                          <svg class="cart-btn-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                            <circle cx="9" cy="21" r="1"></circle>
+                            <circle cx="20" cy="21" r="1"></circle>
+                            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                          </svg>
+                          <span>Adicionar</span>
+                        </button>
+                      </div>
+                    </div>
+                  </article>
+
+                  <!-- Card 4: Cookie Matcha Especial com Gotas -->
+                  <article class="signature-card card-flavor-matcha">
+                    <div class="card-badge-header">
+                      <span class="card-tag-pill tag-dark tag-leaf"><span class="tag-icon">🍃</span> EDIÇÃO ESPECIAL</span>
+                      <span class="card-tag-pill tag-cream">PESO LÍQ. 35g</span>
+                    </div>
+
+                    <!-- Fundo Ondulado Verde Matcha + Foto do Cookie Matcha -->
+                    <div class="cookie-visual-container card-visual-matcha" data-view="catalogo" title="Clique para abrir cardápio">
+                      <div class="card-stage-wave wave-green-stage" aria-hidden="true"></div>
+                      <img src="public/cookie03.jpeg" alt="Cookie Matcha Especial com Gotas" class="cookie-card-photo">
+                    </div>
+
+                    <div class="card-info-content">
+                      <h3 class="card-cookie-title">Cookie Matcha Especial com Gotas</h3>
+                      <p class="card-cookie-desc">Toque oriental suave com gotas de cacau!</p>
+
+                      <div class="card-bottom-actions">
+                        <div class="card-price-block">
+                          <div class="price-val-wrap">
+                            <span class="price-currency">R$</span>
+                            <strong class="price-num">7,90</strong>
+                          </div>
+                          <button class="card-details-link" data-view="catalogo" type="button">Ver Detalhes →</button>
+                        </div>
+                        <button class="btn-nhac-pill btn-card-add" data-add-cart="matcha" type="button">
+                          <svg class="cart-btn-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                            <circle cx="9" cy="21" r="1"></circle>
+                            <circle cx="20" cy="21" r="1"></circle>
+                            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                          </svg>
+                          <span>Adicionar</span>
+                        </button>
+                      </div>
+                    </div>
+                  </article>
+
                 </div>
-                <!-- Frase em caligrafia branca (ref.png) -->
-                <p class="signature-script-phrase">Macio por dentro, crocante por fora!</p>
-
-                <div class="card-bottom-actions">
-                  <div class="price-indicator">
-                    <span class="currency-symbol">R$</span>
-                    <strong class="price-val">6,90</strong>
-                  </div>
-                  <div class="card-btn-group">
-                    <button class="btn-card-details" data-view="gotas">Ver Detalhes</button>
-                    <button class="btn-nhac-pill btn-card-add" data-add-cart="gotas">
-                      <span>Adicionar</span>
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </article>
-
-            <!-- Card 2: Biscoito Cookie com Recheio de Chocolate (ref.png Tela 4) -->
-            <article class="signature-card theme-brown">
-              <div class="card-badge-header">
-                <span class="seal-pill seal-pill-warm">FEITO À MÃO ★</span>
-                <span class="weight-pill">PESO LÍQ. 40g</span>
               </div>
 
-              <!-- Foto Real do Cookie Recheado de Chocolate (public/cookie_recheado.png) -->
-              <div class="cookie-visual-container" data-view="recheio" title="Clique para abrir detalhes">
-                <img src="public/cookie_recheado.png" alt="Biscoito Cookie com recheio de Chocolate" class="cookie-card-photo">
-              </div>
+              <!-- Botão Próximo > -->
+              <button class="carousel-nav-btn carousel-next-btn" id="flavor-next-btn" aria-label="Próximo sabor" type="button">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+              </button>
 
-              <div class="card-info-content">
-                <!-- Balão Amarelo de Título (ref.png) -->
-                <div class="yellow-title-bubble">
-                  <h3>Biscoito Cookie com recheio de Chocolate</h3>
-                </div>
-                <!-- Frase em caligrafia branca (ref.png) -->
-                <p class="signature-script-phrase">Crocante por fora, cremoso por dentro!</p>
-
-                <div class="card-bottom-actions">
-                  <div class="price-indicator">
-                    <span class="currency-symbol">R$</span>
-                    <strong class="price-val">7,90</strong>
-                  </div>
-                  <div class="card-btn-group">
-                    <button class="btn-card-details" data-view="recheio">Ver Detalhes</button>
-                    <button class="btn-nhac-pill btn-card-add" data-add-cart="recheio">
-                      <span>Adicionar</span>
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </article>
-
-            <!-- Card 3: Cookie Red Velvet com Gotas de Chocolate (public/cookie01.jpeg) -->
-            <article class="signature-card theme-red">
-              <div class="card-badge-header">
-                <span class="seal-pill seal-pill-red">RECEITA NOVA ★</span>
-                <span class="weight-pill">PESO LÍQ. 35g</span>
-              </div>
-
-              <!-- Foto Real do Cookie Red Velvet -->
-              <div class="cookie-visual-container" data-view="catalogo" title="Clique para abrir cardápio">
-                <img src="public/cookie01.jpeg" alt="Cookie Red Velvet com Gotas" class="cookie-card-photo">
-              </div>
-
-              <div class="card-info-content">
-                <div class="yellow-title-bubble">
-                  <h3>Cookie Red Velvet com Gotas</h3>
-                </div>
-                <p class="signature-script-phrase">Massa aveludada com gotas nobres!</p>
-
-                <div class="card-bottom-actions">
-                  <div class="price-indicator">
-                    <span class="currency-symbol">R$</span>
-                    <strong class="price-val">7,90</strong>
-                  </div>
-                  <div class="card-btn-group">
-                    <button class="btn-card-details" data-view="catalogo">Ver Sabores</button>
-                    <button class="btn-nhac-pill btn-card-add" data-add-cart="redvelvet">
-                      <span>Adicionar</span>
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </article>
-
-            <!-- Card 4: Cookie Matcha Especial com Gotas (public/cookie03.jpeg) -->
-            <article class="signature-card theme-green">
-              <div class="card-badge-header">
-                <span class="seal-pill seal-pill-green">EDIÇÃO ESPECIAL</span>
-                <span class="weight-pill">PESO LÍQ. 35g</span>
-              </div>
-
-              <!-- Foto Real do Cookie Matcha -->
-              <div class="cookie-visual-container" data-view="catalogo" title="Clique para abrir cardápio">
-                <img src="public/cookie03.jpeg" alt="Cookie Matcha Especial com Gotas" class="cookie-card-photo">
-              </div>
-
-              <div class="card-info-content">
-                <div class="yellow-title-bubble">
-                  <h3>Cookie Matcha Especial com Gotas</h3>
-                </div>
-                <p class="signature-script-phrase">Toque oriental suave com gotas de cacau!</p>
-
-                <div class="card-bottom-actions">
-                  <div class="price-indicator">
-                    <span class="currency-symbol">R$</span>
-                    <strong class="price-val">7,90</strong>
-                  </div>
-                  <div class="card-btn-group">
-                    <button class="btn-card-details" data-view="catalogo">Ver Sabores</button>
-                    <button class="btn-nhac-pill btn-card-add" data-add-cart="matcha">
-                      <span>Adicionar</span>
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </article>
-                </div>
-              </div>
               <div class="flavor-dots" id="flavor-dots" role="tablist" aria-label="Escolher sabor"></div>
             </div>
 
-            <!-- Card 5 DESTAQUE: Caixa Especial com 12 Cookies (Imagem real da pasta public/) -->
-            <article class="signature-card theme-box signature-card-featured reveal-fade">
-              <span class="featured-ribbon" aria-hidden="true">★ DESTAQUE • EDIÇÃO ESPECIAL ★</span>
-              <div class="card-badge-header">
-                <span class="seal-pill seal-pill-purple">EDIÇÃO ESPECIAL ★</span>
-                <span class="weight-pill">CAIXA COM 12 • ECONOMIA</span>
-              </div>
-
-              <div class="cookie-visual-container cookie-visual-featured" data-view="catalogo" title="Clique para ver cardápio completo">
-                <img src="public/Caixa Roxa de Cookies Artesanais.png" alt="Caixa Roxa de Cookies Artesanais" class="box-real-thumb">
-                <span class="featured-seal">12<br>un.</span>
-              </div>
-
-              <div class="card-info-content card-info-featured">
-                <div class="yellow-title-bubble">
-                  <h3>Caixa Especial de Cookies Artesanais</h3>
-                </div>
-                <p class="signature-script-phrase phrase-dark">O presente perfeito para quem ama doce!</p>
-                <p class="featured-desc">Leve os 4 sabores mais amados + embalagem presente exclusiva nhac! Ideal para festas e lembrancinhas.</p>
-
-                <div class="card-bottom-actions">
-                  <div class="price-indicator">
-                    <span class="currency-symbol">R$</span>
-                    <strong class="price-val">49,90</strong>
+            <!-- Card 5 DESTAQUE: Caixa Especial com 12 Cookies (Grande Destaque Ocupando a Largura Total) -->
+            <article class="signature-card-featured reveal-fade">
+              <span class="featured-ribbon" aria-hidden="true">★ DESTAQUE • EDIÇÃO ESPECIAL • MELHOR ESCOLHA nhac! ★</span>
+              
+              <div class="featured-grid-layout">
+                <!-- Lado Esquerdo: Foto da Caixa com Selo -->
+                <div class="featured-media-side" data-view="catalogo" title="Clique para ver cardápio completo">
+                  <img src="public/Caixa Roxa de Cookies Artesanais.png" alt="Caixa Roxa de Cookies Artesanais" class="box-real-thumb">
+                  <div class="featured-floating-seal">
+                    <span class="seal-num">12</span>
+                    <span class="seal-txt">unid.</span>
                   </div>
-                  <div class="card-btn-group">
-                    <button class="btn-card-details" data-view="catalogo">Ver Sabores</button>
-                    <button class="btn-nhac-pill btn-card-add btn-featured-add" data-add-cart="caixa">
-                      <span>Quero a caixa 🎁</span>
+                  <span class="featured-seal-banner">Seleção dos 4 Sabores</span>
+                </div>
+
+                <!-- Lado Direito: Informações, Economia e Compra -->
+                <div class="featured-info-side">
+                  <div class="featured-badge-row">
+                    <span class="card-tag-pill tag-purple-pill">★ EDIÇÃO ESPECIAL</span>
+                    <span class="card-tag-pill tag-saving-pill">🔥 ECONOMIZE R$ 35,00</span>
+                    <span class="card-tag-pill tag-badge-gold">✦ CUSTO-BENEFÍCIO</span>
+                  </div>
+
+                  <h3 class="featured-box-title">Caixa Especial de Cookies Artesanais (12 Unid.)</h3>
+                  <p class="featured-script-phrase">O presente perfeito e a experiência completa nhac! ♡</p>
+                  <p class="featured-box-desc">Uma seleção irresistível e fresca com os 4 sabores mais amados: Tradicional com Gotas, Recheado de Chocolate, Red Velvet e Matcha Especial. Embalados em nossa caixa presenteável exclusiva.</p>
+
+                  <div class="featured-perks-list">
+                    <span class="featured-perk-item">✓ 12 Cookies artesanais (35g a 40g)</span>
+                    <span class="featured-perk-item">✓ Caixa rígida presenteável</span>
+                    <span class="featured-perk-item">✓ Mix com todos os sabores</span>
+                  </div>
+
+                  <div class="featured-price-action-row">
+                    <div class="featured-price-block">
+                      <span class="old-price-strikethrough">De R$ 84,90 por</span>
+                      <div class="featured-price-current">
+                        <span class="f-currency">R$</span>
+                        <strong class="f-num">49,90</strong>
+                      </div>
+                      <span class="f-discount-tag">Economia de 41%</span>
+                    </div>
+                    <button class="btn-nhac-pill btn-featured-add-cart" data-add-cart="caixa" type="button">
+                      <svg class="cart-btn-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                        <circle cx="9" cy="21" r="1"></circle>
+                        <circle cx="20" cy="21" r="1"></circle>
+                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                      </svg>
+                      <span>Quero a Caixa Especial 🎁</span>
                     </button>
                   </div>
                 </div>

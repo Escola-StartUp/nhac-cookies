@@ -648,8 +648,13 @@ document.addEventListener('DOMContentLoaded', () => {
       const bleed = Math.min(Math.max((vpW - baseW) / 2, 0), containerW * 0.3);
       flavorCarousel.style.setProperty('--flavor-bleed', `${bleed}px`);
       const centerOffset = (vpW - baseW) / 2;
-      const x = fIndex * (baseW + gap) - centerOffset;
-      flavorTrack.style.transform = `translateX(${-x}px)`;
+      const totalTrackW = fTotal * (baseW + gap) - gap;
+      if (totalTrackW <= vpW) {
+        flavorTrack.style.transform = `translateX(0px)`;
+      } else {
+        const x = fIndex * (baseW + gap) - centerOffset;
+        flavorTrack.style.transform = `translateX(${-x}px)`;
+      }
       fSlides.forEach((s, si) => s.classList.toggle('is-center', si === fIndex));
       fDots.forEach((d, di) => d.classList.toggle('active', di === fIndex));
     }
@@ -663,6 +668,21 @@ document.addEventListener('DOMContentLoaded', () => {
       fTimer = null;
     }
     function fRestart() { fStart(); }
+
+    const flavorPrevBtn = document.getElementById('flavor-prev-btn');
+    const flavorNextBtn = document.getElementById('flavor-next-btn');
+    if (flavorPrevBtn) {
+      flavorPrevBtn.addEventListener('click', () => {
+        fGoTo(fIndex - 1);
+        fRestart();
+      });
+    }
+    if (flavorNextBtn) {
+      flavorNextBtn.addEventListener('click', () => {
+        fGoTo(fIndex + 1);
+        fRestart();
+      });
+    }
 
     if (flavorCarousel) {
       flavorCarousel.addEventListener('mouseenter', fStop);
