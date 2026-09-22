@@ -514,6 +514,11 @@ body[data-active-view="splash"] .mobile-bottom-bar {
 
 body[data-active-view="splash"] .view-splash {
   min-height: 100vh;
+  padding-bottom: 0;
+}
+
+body[data-active-view="splash"] .app-viewport {
+  padding-bottom: 0;
 }
 
 /* Container do palco de abertura — proporção travada com a onda amarela para alinhamento 100% fiel */
