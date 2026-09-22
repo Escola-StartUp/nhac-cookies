@@ -5486,7 +5486,7 @@ body[data-active-view="splash"] .view-splash {
   }
 
   .hero-text-side {
-    left: 0;
+    left: 0 !important;
     width: 100%;
     margin: 0 auto;
     padding: 0;
@@ -5498,7 +5498,7 @@ body[data-active-view="splash"] .view-splash {
   .hero-chamada-wrap {
     max-width: 440px;
     width: 90%;
-    margin: 0 auto 10px;
+    margin: 0 auto 10px !important;
   }
 
   .hero-chamada-img {
@@ -5509,7 +5509,8 @@ body[data-active-view="splash"] .view-splash {
   .home-main-subheading {
     font-size: 1.05rem;
     max-width: 340px;
-    margin: 0 auto 16px;
+    margin: 0 auto 16px !important;
+    text-align: center;
   }
 
   .hero-inline-features {
@@ -5517,9 +5518,9 @@ body[data-active-view="splash"] .view-splash {
     margin-bottom: 18px;
     width: 100%;
     max-width: 440px;
-    margin-left: auto;
-    margin-right: auto;
-    justify-content: center;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    justify-content: center !important;
   }
 
   .feature-circle-icon {
@@ -5539,7 +5540,7 @@ body[data-active-view="splash"] .view-splash {
   .btn-hero-sabores {
     font-size: 1.05rem;
     padding: 12px 28px;
-    margin: 0 auto;
+    margin: 0 auto !important;
   }
 
   .hero-visual-side {
