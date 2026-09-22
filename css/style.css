@@ -1793,8 +1793,8 @@ body[data-active-view="splash"] .view-splash {
   }
 
   .home-main-subheading {
-    font-size: 0.98rem;
-    max-width: 76%;
+    font-size: 1.98rem;
+    max-width: 100%;
   }
 
   .hero-inline-features {
@@ -5515,6 +5515,9 @@ body[data-active-view="splash"] .view-splash {
   }
 
   .hero-inline-features {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     gap: 8px;
     margin-bottom: 18px;
     width: 100%;
@@ -7120,10 +7123,12 @@ body[data-active-view="splash"] .view-splash {
   }
 
   .hero-inline-features {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 85%;
     margin-left: auto;
     margin-right: auto;
-    justify-content: center;
     gap: 6px;
     margin-bottom: 12px;
   }
@@ -7139,13 +7144,14 @@ body[data-active-view="splash"] .view-splash {
   }
 
   .feature-text {
-    font-size: 0.65rem;
+    font-size: 0.80rem;
   }
 
   .btn-hero-sabores {
     font-size: 0.85rem;
     padding: 8px 18px;
     min-width: 40%;
+    justify-content: center;
     margin: 0 auto;
     display: flex;
   }
