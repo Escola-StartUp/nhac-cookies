@@ -14,7 +14,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Chewy&family=Fredoka:wght@400;500;600;700;800&family=Patrick+Hand&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="css/style.css?v=11">
+  <link rel="stylesheet" href="css/style.css?v=33">
 </head>
 <body>
 
@@ -321,11 +321,23 @@
          os 4 selos de garantia, vitrine de sabores, galeria real e história.
          ======================================================== -->
     <section class="view-panel view-home" id="view-home">
-      <!-- 1. Hero Section da Home — Fiel à imagem de referência -->
+      <!-- 1. Hero Section da Home — Fiel à imagem de referência mobile.png -->
       <section class="home-hero-section">
-        <!-- Blobs decorativos de fundo -->
-        <div class="hero-blob hero-blob-yellow-top" aria-hidden="true"></div>
-        <div class="hero-blob hero-blob-purple-center" aria-hidden="true"></div>
+        <!-- Blobs decorativos de fundo com ondas orgânicas e traços brancos da referência -->
+        <div class="hero-blob hero-blob-yellow-top" aria-hidden="true">
+          <svg viewBox="0 0 180 180" fill="none" preserveAspectRatio="none">
+            <path d="M0,0 L180,0 C135,45 155,95 85,130 C30,155 10,130 0,180 Z" fill="#FFD737"/>
+            <path d="M0,45 C75,32 120,72 65,145" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" fill="none" opacity="0.85"/>
+            <path d="M0,90 C45,80 80,105 48,155" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" fill="none" opacity="0.65"/>
+          </svg>
+        </div>
+        <div class="hero-blob hero-blob-purple-center" aria-hidden="true">
+          <svg viewBox="0 0 190 190" fill="none" preserveAspectRatio="none">
+            <path d="M25,0 L190,0 L190,190 C155,155 165,115 115,82 C62,50 32,55 25,0 Z" fill="#6F2BD9"/>
+            <path d="M72,0 C88,58 132,78 190,135" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" fill="none" opacity="0.85"/>
+            <path d="M125,0 C136,42 162,62 190,90" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" fill="none" opacity="0.65"/>
+          </svg>
+        </div>
         
         <div class="content-container hero-flex">
           <!-- Lado Esquerdo: Imagem da Chamada, Selos e CTA -->
@@ -333,6 +345,13 @@
             <!-- Imagem da Chamada Oficial do Hero: 'O cookie perfeito existe!' -->
             <div class="hero-chamada-wrap">
               <img src="public/chamada_hero.png" alt="O cookie perfeito existe!" class="hero-chamada-img">
+              <!-- 4 Raios amarelos à direita do título conforme mobile.png -->
+              <div class="hero-title-yellow-rays" aria-hidden="true">
+                <span class="t-ray t-ray-1"></span>
+                <span class="t-ray t-ray-2"></span>
+                <span class="t-ray t-ray-3"></span>
+                <span class="t-ray t-ray-4"></span>
+              </div>
               <h1 class="sr-only">O cookie perfeito existe!</h1>
             </div>
 
@@ -344,7 +363,7 @@
             <div class="hero-inline-features">
               <div class="hero-feature-pill">
                 <span class="feature-circle-icon feature-leaf" aria-hidden="true">
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#531C0D" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#531C0D" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/>
                     <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/>
                   </svg>
@@ -354,7 +373,7 @@
 
               <div class="hero-feature-pill">
                 <span class="feature-circle-icon feature-heart" aria-hidden="true">
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="#6F2BD9" stroke="#6F2BD9" stroke-width="1.5">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="#6F2BD9" stroke="#6F2BD9" stroke-width="1.5">
                     <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
                   </svg>
                 </span>
@@ -363,7 +382,7 @@
 
               <div class="hero-feature-pill">
                 <span class="feature-circle-icon feature-smile" aria-hidden="true">
-                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#531C0D" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#531C0D" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                     <circle cx="12" cy="12" r="10"/>
                     <path d="M8 14s1.5 2 4 2 4-2 4-2"/>
                     <line x1="9" y1="9" x2="9.01" y2="9"/>
@@ -374,12 +393,26 @@
               </div>
             </div>
 
-            <!-- Botão CTA Principal -->
+            <!-- Botão CTA Principal com raios solares da referência mobile.png -->
             <div class="hero-cta-wrapper">
+              <span class="cta-burst-rays cta-burst-left" aria-hidden="true">
+                <svg viewBox="0 0 36 36" width="30" height="30" fill="none">
+                  <path d="M 28 18 L 8 18" stroke="#FFD737" stroke-width="3.5" stroke-linecap="round"/>
+                  <path d="M 25 10 L 10 3" stroke="#FFD737" stroke-width="3.5" stroke-linecap="round"/>
+                  <path d="M 25 26 L 10 33" stroke="#FFD737" stroke-width="3.5" stroke-linecap="round"/>
+                </svg>
+              </span>
               <button class="btn-nhac-pill btn-hero-sabores" data-view="catalogo">
                 <span>Ver sabores</span>
                 <span class="btn-arrow">→</span>
               </button>
+              <span class="cta-burst-rays cta-burst-right" aria-hidden="true">
+                <svg viewBox="0 0 36 36" width="30" height="30" fill="none">
+                  <path d="M 8 18 L 28 18" stroke="#FFD737" stroke-width="3.5" stroke-linecap="round"/>
+                  <path d="M 11 10 L 26 3" stroke="#FFD737" stroke-width="3.5" stroke-linecap="round"/>
+                  <path d="M 11 26 L 26 33" stroke="#FFD737" stroke-width="3.5" stroke-linecap="round"/>
+                </svg>
+              </span>
             </div>
           </div>
 
@@ -387,7 +420,7 @@
           <div class="hero-visual-side reveal-right">
             <!-- Anotação Manuscrita com seta apontando para o cookie -->
             <div class="hero-crocante-annotation" aria-hidden="true">
-              <span class="crocante-text">Crôcante<br>por fora,<br>macio por<br>dentro!</span>
+              <span class="crocante-text">Crocante<br>por fora,<br>macio por<br>dentro!</span>
               <svg class="crocante-arrow-svg" width="34" height="46" viewBox="0 0 34 46" fill="none">
                 <path d="M6 4 C 8 20, 24 24, 20 40" stroke="#3D1B10" stroke-width="2.2" stroke-linecap="round" fill="none"/>
                 <path d="M14 36 L 20 42 L 26 36" stroke="#3D1B10" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
