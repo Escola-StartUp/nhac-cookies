@@ -7114,6 +7114,8 @@ body[data-active-view="splash"] .view-splash {
 
   .hero-inline-features {
     width: 85%;
+    margin-left: auto;
+    margin-right: auto;
     justify-content: center;
     gap: 6px;
     margin-bottom: 12px;
