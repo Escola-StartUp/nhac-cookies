@@ -5483,6 +5483,7 @@ body[data-active-view="splash"] .view-splash {
     grid-template-columns: 1fr;
     gap: 10px;
     padding: 0 14px;
+    text-align: center;
   }
 
   .hero-text-side {
