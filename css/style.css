@@ -4514,6 +4514,7 @@ body[data-active-view="splash"] .app-viewport {
   .story-text {
     text-align: center;
     width: 100%;
+    transform: none !important;
   }
 
   .artisan-contact-card {
@@ -4529,6 +4530,7 @@ body[data-active-view="splash"] .app-viewport {
     max-width: 420px;
     margin-left: auto;
     margin-right: auto;
+    transform: none !important;
   }
 
   /* Centralização mobile: rodapé */
@@ -6239,6 +6241,7 @@ body[data-active-view="splash"] .app-viewport {
     max-width: 100%;
     padding: 0 4px;
     margin: 0 auto;
+    transform: none !important;
   }
 
   .story-text p {
@@ -6308,6 +6311,7 @@ body[data-active-view="splash"] .app-viewport {
     width: 100%;
     padding: 20px 16px;
     margin: 0 auto;
+    transform: none !important;
     display: flex;
     flex-direction: column;
     align-items: center;
