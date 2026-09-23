@@ -560,35 +560,15 @@ body[data-active-view="splash"] .app-viewport {
   object-fit: cover;
 }
 
-/* 2. Pilha de cookies à esquerda — no meio da curva amarela da esquerda */
-.abertura-cookie-img {
-  position: absolute;
-  left: 4%;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 28%;
-  max-width: 420px;
-  height: auto;
-  z-index: 4;
-  filter: drop-shadow(0 25px 35px rgba(0, 0, 0, 0.5));
-  animation: aberturaCookieFloat 5s ease-in-out infinite alternate;
-}
 
-@keyframes aberturaCookieFloat {
-  0% {
-    transform: translateY(-50%) rotate(-1deg);
-  }
 
-  100% {
-    transform: translateY(-52%) rotate(0.8deg);
-  }
-}
+
 
 /* 3. Logo oficial — centralizado */
 .abertura-logo-box {
   position: absolute;
   top: 7%;
-  left: 35%;
+  left: 50%;
   transform: translateX(-50%) rotate(-4deg);
   width: 32%;
   max-width: 460px;
@@ -618,8 +598,8 @@ body[data-active-view="splash"] .app-viewport {
 /* 4. Texto central — perfeitamente no centro do vão roxo */
 .abertura-texto-box {
   position: absolute;
-  top: 55%;
-  left: 35%;
+  top: 38%;
+  left: 50%;
   transform: translate(-50%, -50%);
   z-index: 5;
   text-align: center;
@@ -639,11 +619,11 @@ body[data-active-view="splash"] .app-viewport {
   text-shadow: 0 4px 12px rgba(25, 5, 55, 0.7);
 }
 
-/* 5. Ação: Botão Começar — centralizado na base inferior amarela */
+/* 5. Ação: Botão Começar — centralizado mais acima */
 .abertura-action-box {
   position: absolute;
-  bottom: 8%;
-  left: 40%;
+  bottom: 12%;
+  left: 50%;
   transform: translateX(-50%);
   z-index: 6;
   display: flex;
@@ -712,7 +692,6 @@ body[data-active-view="splash"] .app-viewport {
     width: 100vw;
     height: 100vh;
     max-width: 520px;
-    aspect-ratio: 9 / 16;
     display: block;
     position: relative;
     margin: auto;
@@ -737,8 +716,8 @@ body[data-active-view="splash"] .app-viewport {
   /* 1. Logo oficial: repousa perfeitamente sobre o blob amarelo superior */
   .abertura-logo-box {
     position: absolute;
-    top: 14%;
-    left: 14%;
+    top: 8%;
+    left: 50%;
     transform: translateX(-50%) rotate(-4deg);
     width: 74%;
     max-width: 320px;
@@ -751,24 +730,12 @@ body[data-active-view="splash"] .app-viewport {
     filter: drop-shadow(0 8px 20px rgba(50, 10, 80, 0.4));
   }
 
-  /* 2. Pilha de cookies: posicionada sutilmente na lateral esquerda */
-  .abertura-cookie-img {
-    position: absolute;
-    left: -8%;
-    top: 52%;
-    transform: translateY(-50%);
-    width: 44%;
-    max-width: 190px;
-    z-index: 4;
-    filter: drop-shadow(0 12px 24px rgba(0, 0, 0, 0.5));
-  }
-
   /* 3. Frase / Slogan: centralizado no vão roxo entre o logo e a onda inferior */
   .abertura-texto-box {
     position: absolute;
-    top: 48%;
-    left: 16%;
-    transform: translate(-70%, -70%);
+    top: 34%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: 80%;
     max-width: 300px;
     z-index: 5;
@@ -784,11 +751,11 @@ body[data-active-view="splash"] .app-viewport {
     text-shadow: 0 3px 10px rgba(30, 5, 60, 0.8);
   }
 
-  /* 4. Botão Começar: repousa no topo da grande onda amarela inferior */
+  /* 4. Botão Começar: repousa mais acima na onda amarela inferior */
   .abertura-action-box {
     position: absolute;
-    bottom: 8%;
-    left: 13%;
+    bottom: 22%;
+    left: 50%;
     transform: translateX(-50%);
     width: 82%;
     z-index: 6;
@@ -2012,8 +1979,7 @@ body[data-active-view="splash"] .app-viewport {
    ========================================================================== */
 .signature-flavors-section {
   padding: 60px 0 85px;
-  background: #541592;
-  background: linear-gradient(180deg, #5A169C 0%, #46107D 100%);
+  background: #541592 url('../public/fundo_cardapio.jpg') no-repeat center center / cover;
   position: relative;
   overflow: hidden;
   color: #FFF;
@@ -2037,88 +2003,6 @@ body[data-active-view="splash"] .app-viewport {
   height: 100%;
   object-fit: contain;
   filter: drop-shadow(0 14px 28px rgba(0, 0, 0, 0.55));
-}
-
-/* Canto Superior Direito: Blob amarelo com pedaços de chocolate */
-.cardapio-deco-yellow-top-right {
-  position: absolute;
-  top: -20px;
-  right: -30px;
-  width: 180px;
-  height: 160px;
-  pointer-events: none;
-  z-index: 1;
-}
-
-.deco-yellow-blob-svg {
-  width: 100%;
-  height: 100%;
-}
-
-.cardapio-deco-yellow-top-right .deco-choco-chunk {
-  position: absolute;
-  background: #2D1005;
-  border-radius: 4px;
-  box-shadow: inset 1px 1px 2px rgba(255, 255, 255, 0.2), 0 3px 6px rgba(0, 0, 0, 0.4);
-}
-
-.cardapio-deco-yellow-top-right .chunk-1 {
-  width: 22px;
-  height: 18px;
-  top: 45px;
-  right: 50px;
-  transform: rotate(25deg);
-}
-
-.cardapio-deco-yellow-top-right .chunk-2 {
-  width: 18px;
-  height: 16px;
-  top: 85px;
-  right: 90px;
-  transform: rotate(-15deg);
-}
-
-.cardapio-deco-yellow-top-right .chunk-3 {
-  width: 14px;
-  height: 14px;
-  top: 110px;
-  right: 35px;
-  transform: rotate(40deg);
-}
-
-/* Canto Inferior Esquerdo: Faixa amarela com "Mais que cookies, é nhac! ♡" */
-.cardapio-deco-stamp-bottom-left {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 220px;
-  height: 110px;
-  pointer-events: none;
-  z-index: 1;
-}
-
-.deco-stamp-wave-bg {
-  position: relative;
-  width: 100%;
-  height: 100%;
-}
-
-.deco-stamp-wave-bg svg {
-  width: 100%;
-  height: 100%;
-  display: block;
-}
-
-.deco-stamp-text {
-  position: absolute;
-  bottom: 12px;
-  left: 18px;
-  font-family: 'Caveat', cursive, sans-serif;
-  font-size: 1.25rem;
-  font-weight: 700;
-  line-height: 1.1;
-  color: #3D1B10;
-  transform: rotate(-4deg);
 }
 
 /* Canto Inferior Direito: Logo / mascote nhac! Cookies */
@@ -2311,9 +2195,9 @@ body[data-active-view="splash"] .app-viewport {
 
 /* --- Card Individual do Cardápio (Mais Largo e Curto conforme Referência) --- */
 .signature-card {
-  flex: 0 0 calc(25% - 15px);
+  flex: 0 0 calc(30% - 15px);
   min-width: 260px;
-  max-width: 290px;
+  max-width: 340px;
   background: #2E0854;
   border: 1.5px solid rgba(139, 92, 246, 0.25);
   border-radius: 22px;
@@ -2397,7 +2281,7 @@ body[data-active-view="splash"] .app-viewport {
   justify-content: center;
   margin-bottom: 8px;
   cursor: pointer;
-  background: rgba(20, 3, 40, 0.35);
+  background: transparent;
 }
 
 .card-stage-wave {
@@ -2415,12 +2299,12 @@ body[data-active-view="splash"] .app-viewport {
 }
 
 .wave-brown-stage {
-  background: linear-gradient(135deg, #6E2D15 0%, #421508 100%);
+  background: #8A5310;
   border-radius: 55% 45% 40% 60% / 50% 55% 45% 50%;
 }
 
 .wave-red-stage {
-  background: linear-gradient(135deg, #E01A35 0%, #8E0A1E 100%);
+  background: #E30613;
   border-radius: 50%;
   position: relative;
 }
@@ -2436,7 +2320,7 @@ body[data-active-view="splash"] .app-viewport {
 }
 
 .wave-green-stage {
-  background: linear-gradient(135deg, #5CA82B 0%, #306B12 100%);
+  background: #2FBF4E;
   border-radius: 40% 60% 55% 45% / 50% 45% 55% 50%;
 }
 
@@ -2907,16 +2791,12 @@ body[data-active-view="splash"] .app-viewport {
     top: -40px;
     left: -40px;
   }
-
-  .cardapio-deco-yellow-top-right {
-    width: 130px;
-    height: 110px;
-  }
 }
 
 @media (max-width: 600px) {
   .signature-flavors-section {
     padding: 40px 0 60px;
+    background: #541592 url('../public/fundo_cardapio_mobile.jpg') no-repeat center center / cover;
   }
 
   .flavor-carousel {
@@ -2961,22 +2841,6 @@ body[data-active-view="splash"] .app-viewport {
     height: 120px;
     top: -30px;
     left: -30px;
-  }
-
-  .cardapio-deco-yellow-top-right {
-    width: 100px;
-    height: 90px;
-  }
-
-  .cardapio-deco-stamp-bottom-left {
-    width: 160px;
-    height: 80px;
-  }
-
-  .deco-stamp-text {
-    font-size: 0.95rem;
-    left: 10px;
-    bottom: 8px;
   }
 
   .cardapio-deco-logo-bottom-right {
@@ -6404,6 +6268,7 @@ body[data-active-view="splash"] .app-viewport {
   /* Flavors Section - Mobile */
   .signature-flavors-section {
     padding: 40px 0 60px;
+    background: #541592 url('../public/fundo_cardapio_mobile.jpg') no-repeat center center / cover;
   }
 
   .section-title-wrap {
@@ -7862,6 +7727,7 @@ body[data-active-view="splash"] .app-viewport {
   /* Flavors section - compactar */
   .signature-flavors-section {
     padding: 24px 0 40px;
+    background: #541592 url('../public/fundo_cardapio_mobile.jpg') no-repeat center center / cover;
   }
 
   .section-heading {
