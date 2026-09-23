@@ -489,7 +489,7 @@ img {
   opacity: 1;
 }
 
-/* --- 7. VISTA 1: SPLASH (Tela de Abertura) — 100% Fiel a abertura.jpg --- */
+/* --- 7. VISTA 1: SPLASH (Tela de Abertura) — Centralizado e Responsivo --- */
 .view-splash {
   background: #6327B8;
   position: relative;
@@ -499,7 +499,7 @@ img {
   min-height: 100vh;
   justify-content: center;
   align-items: center;
-  padding: 20px;
+  padding: 30px 20px;
 }
 
 .view-splash.active {
@@ -509,7 +509,7 @@ img {
 /* Oculta header e barra inferior mobile na tela de abertura */
 body[data-active-view="splash"] .main-header,
 body[data-active-view="splash"] .mobile-bottom-bar {
-  display: none;
+  display: none !important;
 }
 
 body[data-active-view="splash"] .view-splash {
@@ -521,67 +521,56 @@ body[data-active-view="splash"] .app-viewport {
   padding-bottom: 0;
 }
 
-/* Container do palco de abertura — proporção travada com a onda amarela para alinhamento 100% fiel */
-.abertura-container {
-  position: relative;
-  width: min(94vw, calc(90vh * 1.777));
-  aspect-ratio: 16 / 9;
-  max-width: 1560px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: auto;
-}
-
-/* 1. Formas de fundo: desktop e mobile */
+/* 1. Imagens de fundo: desktop e mobile */
 .abertura-onda-img {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+  object-fit: cover;
+  object-position: center;
   pointer-events: none;
   z-index: 1;
 }
 
 .abertura-desktop-only {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
   display: block;
-  object-fit: cover;
-  z-index: 0;
 }
 
 .abertura-mobile-only {
   display: none;
-  object-fit: cover;
 }
 
-
-
-
+/* 2. Conteúdo centralizado em fluxo vertical perfeito */
+.abertura-center-content {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  max-width: 520px;
+  margin: auto;
+  gap: 20px;
+}
 
 /* 3. Logo oficial — centralizado */
 .abertura-logo-box {
-  position: absolute;
-  top: 7%;
-  left: 50%;
-  transform: translateX(-50%) rotate(-4deg);
-  width: 32%;
-  max-width: 460px;
-  z-index: 5;
+  width: 100%;
+  max-width: min(340px, 28vw, 36vh);
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .abertura-logo-img {
   width: 100%;
   height: auto;
   object-fit: contain;
-  filter: drop-shadow(0 12px 28px rgba(60, 20, 110, 0.35));
+  filter: drop-shadow(0 14px 28px rgba(40, 10, 80, 0.45));
   animation: aberturaLogoPulse 4s ease-in-out infinite alternate;
 }
 
@@ -589,46 +578,36 @@ body[data-active-view="splash"] .app-viewport {
   0% {
     transform: scale(1);
   }
-
   100% {
-    transform: scale(1.025);
+    transform: scale(1.03);
   }
 }
 
-/* 4. Texto central — perfeitamente no centro do vão roxo */
+/* 4. Chamada / Slogan — perfeitamente no centro */
 .abertura-texto-box {
-  position: absolute;
-  top: 38%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 5;
-  text-align: center;
-  pointer-events: none;
   width: 100%;
   max-width: 440px;
+  text-align: center;
 }
 
 .abertura-slogan {
   font-family: var(--font-display);
-  font-size: clamp(1.2rem, 2.1vw, 2.2rem);
+  font-size: clamp(1.25rem, 2.1vw, 2.1rem);
   font-weight: 800;
   color: #FFD737;
-  line-height: 1.18;
+  line-height: 1.2;
   letter-spacing: -0.01em;
   margin: 0;
-  text-shadow: 0 4px 12px rgba(25, 5, 55, 0.7);
+  text-shadow: 0 4px 14px rgba(25, 5, 55, 0.8), 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-/* 5. Ação: Botão Começar — centralizado mais acima */
+/* 5. Ação: Botão Começar — centralizado */
 .abertura-action-box {
-  position: absolute;
-  bottom: 12%;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 6;
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 10px;
+  margin-top: 6px;
 }
 
 .btn-abertura-comecar {
@@ -636,22 +615,22 @@ body[data-active-view="splash"] .app-viewport {
   color: #4C1C00;
   border: none;
   font-family: var(--font-display);
-  font-size: clamp(1.15rem, 1.8vw, 1.65rem);
+  font-size: clamp(1.15rem, 1.6vw, 1.55rem);
   font-weight: 800;
-  padding: 0.65em 2.3em;
+  padding: 0.68em 2.4em;
   border-radius: var(--radius-full);
   display: inline-flex;
   align-items: center;
   gap: 12px;
   cursor: pointer;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3), 0 0 28px rgba(255, 215, 55, 0.45);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35), 0 0 26px rgba(255, 215, 55, 0.45);
   transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
 }
 
 .btn-abertura-comecar:hover {
   transform: translateY(-3px) scale(1.04);
   background-color: #FFE266;
-  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.38), 0 0 38px rgba(255, 215, 55, 0.65);
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.4), 0 0 38px rgba(255, 215, 55, 0.65);
 }
 
 .btn-abertura-comecar .btn-arrow {
@@ -665,125 +644,53 @@ body[data-active-view="splash"] .app-viewport {
 }
 
 .abertura-origem {
-  margin-top: 10px;
+  margin: 0;
   font-family: var(--font-display);
-  font-size: clamp(0.75rem, 1.05vw, 1.1rem);
+  font-size: clamp(0.78rem, 1vw, 1.05rem);
   font-weight: 700;
   color: #FFFFFF;
   letter-spacing: 0.04em;
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
 }
-
-
-
 
 /* Responsividade para telas menores e dispositivos móveis (fundo_mobile.jpg) */
 @media (max-width: 768px) {
   .view-splash {
-    padding: 0;
-    margin: 0;
-    width: 100vw;
-    height: 100vh;
-    min-height: 100vh;
-    overflow: hidden;
+    padding: 24px 16px;
   }
 
-  .abertura-container {
-    width: 100vw;
-    height: 100vh;
-    max-width: 520px;
-    display: block;
-    position: relative;
-    margin: auto;
-  }
-
-  /* Troca a onda horizontal pelo fundo vertical oficial mobile */
   .abertura-desktop-only {
     display: none !important;
   }
 
   .abertura-mobile-only {
     display: block !important;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: fill;
-    z-index: 1;
   }
 
-  /* 1. Logo oficial: repousa perfeitamente sobre o blob amarelo superior */
+  .abertura-center-content {
+    max-width: 330px;
+    gap: 16px;
+  }
+
   .abertura-logo-box {
-    position: absolute;
-    top: 8%;
-    left: 50%;
-    transform: translateX(-50%) rotate(-4deg);
-    width: 74%;
-    max-width: 320px;
-    z-index: 5;
-    margin: 0;
-  }
-
-  .abertura-logo-img {
-    width: 100%;
-    filter: drop-shadow(0 8px 20px rgba(50, 10, 80, 0.4));
-  }
-
-  /* 3. Frase / Slogan: centralizado no vão roxo entre o logo e a onda inferior */
-  .abertura-texto-box {
-    position: absolute;
-    top: 34%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 80%;
-    max-width: 300px;
-    z-index: 5;
-    text-align: center;
-    margin: 0;
+    max-width: min(250px, 68vw, 30vh);
   }
 
   .abertura-slogan {
-    font-size: clamp(2.50rem, 5.2vw, 1.65rem);
-    font-weight: 800;
-    color: #FFD737;
-    line-height: 1.15;
-    text-shadow: 0 3px 10px rgba(30, 5, 60, 0.8);
-  }
-
-  /* 4. Botão Começar: repousa mais acima na onda amarela inferior */
-  .abertura-action-box {
-    position: absolute;
-    bottom: 22%;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 82%;
-    z-index: 6;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    font-size: clamp(1.2rem, 5.2vw, 1.55rem);
+    line-height: 1.22;
   }
 
   .btn-abertura-comecar {
-    font-size: clamp(1.15rem, 4.8vw, 1.4rem);
-    padding: 0.7em 2.2em;
-    width: 100%;
-    max-width: 290px;
-    justify-content: center;
-    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.3), 0 0 20px rgba(255, 215, 55, 0.5);
+    font-size: 1.15rem;
+    padding: 0.72em 2.2em;
+    width: auto;
   }
 
   .abertura-origem {
-    margin-top: 8px;
     font-size: 0.82rem;
-    color: #FFFFFF;
-    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
   }
 }
-
-
-
 
 /* --- 8. VISTA 2: TELA INÍCIO / HOME (ref.png Tela 2) --- */
 /* --- 8. VISTA 2: TELA INÍCIO / HERO (Fiel à Imagem de Referência) --- */

@@ -274,23 +274,20 @@
          ======================================================== -->
     <section class="view-panel view-splash active" id="view-splash" aria-label="Boas-vindas nhac! COOKIES">
 
-      <!-- Stage da Abertura com proporção fixa / responsiva guiada pela arte de referência -->
-      <div class="abertura-container">
-        
-        <!-- 1. Forma amarela desktop oficial (base horizontal) -->
-        <img src="public/fundo_desktop.png" alt="" aria-hidden="true" class="abertura-onda-img abertura-desktop-only">
+      <!-- 1. Formas de fundo desktop e mobile -->
+      <img src="public/fundo_desktop.png" alt="" aria-hidden="true" class="abertura-onda-img abertura-desktop-only">
+      <img src="elementos_abertura/fundo_mobile.jpg" alt="" aria-hidden="true" class="abertura-onda-img abertura-mobile-only">
 
-        <!-- 1b. Imagem de fundo vertical oficial para Mobile (fundo_mobile.jpg) -->
-        <img src="elementos_abertura/fundo_mobile.jpg" alt="" aria-hidden="true" class="abertura-onda-img abertura-mobile-only">
-
+      <!-- 2. Conteúdo centralizado e alinhado (Logo, Chamada e Botão) -->
+      <div class="abertura-center-content">
         
-        <!-- 3. Logo oficial centralizado acima do vão -->
-        <div class="abertura-logo-box reveal-scale">
+        <!-- Logo oficial -->
+        <div class="abertura-logo-box">
           <img src="public/logo.png" alt="nhac! COOKIES" class="abertura-logo-img">
         </div>
 
-        <!-- 4. Texto / Frase de impacto no vão roxo -->
-        <div class="abertura-texto-box reveal">
+        <!-- Frase de impacto / Chamada -->
+        <div class="abertura-texto-box">
           <p class="abertura-slogan">
             Cookies artesanais<br>
             que deixam o dia<br>
@@ -298,8 +295,8 @@
           </p>
         </div>
 
-        <!-- 5. Botão "Começar →" e crédito na base da onda amarela -->
-        <div class="abertura-action-box reveal" data-reveal-delay="0.15">
+        <!-- Botão "Começar →" e crédito -->
+        <div class="abertura-action-box">
           <button class="btn-abertura-comecar" data-view="home" id="btn-splash-start">
             <span>Começar</span>
             <span class="btn-arrow">→</span>
